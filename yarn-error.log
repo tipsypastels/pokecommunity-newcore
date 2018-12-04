@@ -1,0 +1,40 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js start
+
+PATH: 
+  c:\devkitPro\msys2\usr\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;c:\program files\graphicsmagick-1.3.28-q16;C:\Program Files\ImageMagick-7.0.7-Q16;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\PuTTY\;D:\Program Files\Git\cmd;D:\PostgreSQL\pg96\bin;C:\HashiCorp\Vagrant\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\nodejs\;C:\Program Files (x86)\Elm Platform\0.18\bin;D:\Ruby24-x64\bin;C:\Users\Dakota\AppData\Local\Microsoft\WindowsApps;C:\Users\Dakota\AppData\Local\Yarn\bin;C:\Program Files\heroku\bin;D:\Users\Dakota\AppData\Local\Programs\Microsoft VS Code\bin;C:\Exercism;C:\Users\Dakota\AppData\Roaming\npm
+
+Yarn version: 
+  1.9.4
+
+Node version: 
+  10.14.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: D:\Users\Dakota\Documents\_pokecom\pokecommunity-newcore\package.json: Unexpected token } in JSON at position 270
+      at JSON.parse (<anonymous>)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:1130:59
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:92:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:103:13
+
+npm manifest: 
+  {
+    "name": "pokecommunity-newcore",
+    "version": "1.0.0",
+    "description": "PokeCommunity API",
+    "main": "index.js",
+    "repository": "https://github.com/tipsypastels/pokecommunity-newcore",
+    "author": "tipsypastels, Sotomura",
+    "license": "MIT",
+    "private": false,
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
