@@ -22,4 +22,4 @@ router.get('/', (req, res) => {
 // prefixes /api to all our routes, good practice
 app.use('/api/v1/', router);
 app.listen(port);
-console.log(`Listening on PORT: ${port}! Try localhost:${post}/api/v1!`);
+console.log(`Listening on PORT: ${port}! Try localhost:${port}/api/v1!`);
