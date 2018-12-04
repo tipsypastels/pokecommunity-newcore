@@ -19,7 +19,7 @@ router.get('/', (req, res) => {
   res.json({ message: 'hello world!' });
 });
 
-// prefixes /api to all our routes, good practice
+// prefixes /api/v1 to all our routes, good practice
 app.use('/api/v1/', router);
 app.listen(port);
 console.log(`Listening on PORT: ${port}! Try localhost:${port}/api/v1!`);
