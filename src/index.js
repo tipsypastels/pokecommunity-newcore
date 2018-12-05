@@ -29,10 +29,6 @@ app.use(bodyParser.json());
 // create a router do define the endpoints
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.json({ message: 'hello world!' });
-});
-
 router.get('/users/:userid', (req, res) => {
   UsersController.show(req, res, connection);
 });
