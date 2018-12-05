@@ -9,7 +9,8 @@
   "private": false,
   "scripts": {
     "build": "babel src -d lib",
-    "start": "yarn build && node lib/index.js"
+    "start": "yarn build && node lib/index.js",
+    "seed": "yarn build && node lib/seeds.js"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

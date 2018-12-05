@@ -1,8 +1,14 @@
 // ES6 syntax for require()
 import express from 'express';
 import bodyParser from 'body-parser';
-import 'reflect-metadata';
-import './connection.js';
+import ormConnect from './connection.js';
+
+let connection;
+
+// connect to the ORM
+(async function() {
+  connection = await ormConnect();
+})();
 
 // import our database models
 import User from './models/User.js';
@@ -27,7 +33,9 @@ router.get('/', (req, res) => {
   res.json({ message: 'hello world!' });
 });
 
-router.get('/users/:userid', UsersController.show);
+router.get('/users/:userid', (req, res) => {
+  UsersController.show(req, res, connection);
+});
 
 // prefixes /api/v1 to all our routes, good practice
 app.use('/api/v1/', router);

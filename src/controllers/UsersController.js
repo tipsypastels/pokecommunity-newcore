@@ -1,11 +1,8 @@
-import { getConnection } from 'typeorm';
 import User from '../models/User.js';
 
-const connection = getConnection();
-
 export default {
-  async show(req, res) {
+  async show(req, res, connection) {
     const users = connection.getRepository(User);
-    console.log(users.find());
+    res.json(await users.find());
   }
 };
