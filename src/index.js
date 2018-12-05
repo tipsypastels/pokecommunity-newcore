@@ -1,9 +1,14 @@
 // ES6 syntax for require()
 import express from 'express';
 import bodyParser from 'body-parser';
+import 'reflect-metadata';
+import './connection.js';
 
 // import our database models
 import User from './models/User.js';
+
+// import our controllers
+import UsersController from './controllers/UsersController.js';
 
 // server setup
 const app = express();
@@ -21,6 +26,8 @@ const router = express.Router();
 router.get('/', (req, res) => {
   res.json({ message: 'hello world!' });
 });
+
+router.get('/users/:userid', UsersController.show);
 
 // prefixes /api/v1 to all our routes, good practice
 app.use('/api/v1/', router);

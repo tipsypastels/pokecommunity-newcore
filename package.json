@@ -20,6 +20,8 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
+    "reflect-metadata": "^0.1.12",
+    "sqlite3": "^4.0.4",
     "typeorm": "^0.2.9"
   }
 }

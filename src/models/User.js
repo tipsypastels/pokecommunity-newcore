@@ -1,32 +1,32 @@
 import { Entity, BaseEntity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity()
-export class User extends BaseEntity {
+@Entity('user')
+export default class User {
   @PrimaryGeneratedColumn()
   id = undefined;
   
-  @Column('string')
+  @Column('text')
   username = '';
 
   @Column('integer')
   usergroupid = undefined;
 
-  @Column('string')
+  @Column('text')
   membergroupids = '';
 
-  @Column('string')
+  @Column('text')
   displaygroupid = undefined;
 
   @Column('integer')
   styleid = 0;
 
-  @Column('string')
+  @Column('text')
   customtitle = '';
 
   @Column('integer')
   joindate = undefined;
 
-  @Column('string')
+  @Column('text')
   posts = 0;
 
   @Column('integer')
