@@ -2,6 +2,9 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 
+// import our database models
+import User from './models/User.js';
+
 // server setup
 const app = express();
 const port = process.env.PORT || 8080;
