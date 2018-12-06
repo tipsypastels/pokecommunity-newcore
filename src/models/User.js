@@ -1,9 +1,9 @@
-import { Entity, BaseEntity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity('user')
 export default class User {
   @PrimaryGeneratedColumn()
-  id = undefined;
+  userid = undefined;
   
   @Column('text')
   username = '';
