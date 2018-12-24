@@ -59,9 +59,9 @@ class PCRouteBuilder {
      let { requestTypes } = this.constructor;
 
      requestTypes.forEach(type => {
-       this[type] = function(path, action) {
+       this[type] = (path, action) => {
          this._internal(type, path, action);
-       }.bind(this);
+       }
      });
    }
 
