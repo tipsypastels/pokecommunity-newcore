@@ -45,6 +45,15 @@ class PCRouteBuilder {
      this.createTypeMethods();
    }
 
+   /*
+    *  (\_/)
+    * =(^.^)=
+    * (")_(")
+    * 
+    * Jake: What, behind the rabbit?
+    * Dakota: It IS the rabbit!
+    */
+
    createTypeMethods() {
      let { requestTypes } = this.constructor;
 
