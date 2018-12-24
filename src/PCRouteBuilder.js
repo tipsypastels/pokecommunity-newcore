@@ -31,45 +31,45 @@ class PCRouteBuilder {
    * Jake: What an eccentric performance.
    */
 
-   static requestTypes = [
-     'get',
-     'post',
-     'put',
-     'delete',
-   ];
+  static requestTypes = [
+    'get',
+    'post',
+    'put',
+    'delete',
+  ];
 
-   constructor(router, connection) {
-     this.router     = router;
-     this.connection = connection;
+  constructor(router, connection) {
+    this.router     = router;
+    this.connection = connection;
 
-     this.createTypeMethods();
-   }
+    this.createTypeMethods();
+  }
 
-   /*
-    *             (\_/)
-    *            =(^.^)= 
-    *            (")_(")
-    * Rabbit of Unnecessary Metaprogramming
-    * 
-    * Jake: What, behind the rabbit?
-    * Dakota: It IS the rabbit!
-    */
+  /*
+  *             (\_/)
+  *            =(^.^)= 
+  *            (")_(")
+  * Rabbit of Unnecessary Metaprogramming
+  * 
+  * Jake: What, behind the rabbit?
+  * Dakota: It IS the rabbit!
+  */
 
-   createTypeMethods() {
-     let { requestTypes } = this.constructor;
+  createTypeMethods() {
+    let { requestTypes } = this.constructor;
 
-     requestTypes.forEach(type => {
-       this[type] = (path, action) => {
-         this._internal(type, path, action);
-       }
-     });
-   }
+    requestTypes.forEach(type => {
+      this[type] = (path, action) => {
+        this._internal(type, path, action);
+      }
+    });
+  }
 
-   _internal(type, path, action) {
-      this.router[type](path, (req, res) => {
-        action(req, res, this.connection);
-      });
-   }
+  _internal(type, path, action) {
+    this.router[type](path, (req, res) => {
+      action(req, res, this.connection);
+    });
+  }
 }
 
 export default PCRouteBuilder;
