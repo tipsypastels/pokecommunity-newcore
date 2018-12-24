@@ -5,12 +5,6 @@ import ormConnect from './connection.js';
 
 let connection;
 
-// import our database models
-import User from './models/User.js';
-
-// import our controllers
-import UsersController from './controllers/UsersController.js';
-
 // import our route builder
 import PCRouteBuilder from './PCRouteBuilder';
 
