@@ -38,6 +38,10 @@ export default class PCRouteBuilder {
     'delete',
   ];
 
+  static buildRoutes(router, connection) {
+    (new this(router, connection)).buildRoutes();
+  }
+
   constructor(router, connection) {
     this.router     = router;
     this.connection = connection;
