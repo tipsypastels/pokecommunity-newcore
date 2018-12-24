@@ -1,6 +1,6 @@
 import UsersController from './controllers/UsersController';
 
-class PCRouteBuilder {
+export default class PCRouteBuilder {
   /*
    * API ENDPOINTS
    * Use this.get/post depending on the request types.
@@ -71,5 +71,3 @@ class PCRouteBuilder {
     });
   }
 }
-
-export default PCRouteBuilder;
