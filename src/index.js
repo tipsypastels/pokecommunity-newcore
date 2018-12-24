@@ -5,16 +5,14 @@ import ormConnect from './connection.js';
 
 let connection;
 
-// connect to the ORM
-(async function() {
-  connection = await ormConnect();
-})();
-
 // import our database models
 import User from './models/User.js';
 
 // import our controllers
 import UsersController from './controllers/UsersController.js';
+
+// import our route builder
+import PCRouteBuilder from './PCRouteBuilder';
 
 // server setup
 const app = express();
@@ -29,9 +27,11 @@ app.use(bodyParser.json());
 // create a router do define the endpoints
 const router = express.Router();
 
-router.get('/users/:userid', (req, res) => {
-  UsersController.show(req, res, connection);
-});
+// connect to the ORM amd build our routes
+(async function () {
+  connection = await ormConnect();
+  (new PCRouteBuilder(router, connection)).buildRoutes();
+})();
 
 // prefixes /api/v1 to all our routes, good practice
 app.use('/api/v1/', router);
