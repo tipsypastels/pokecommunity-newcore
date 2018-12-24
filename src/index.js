@@ -30,7 +30,9 @@ const router = express.Router();
 // connect to the ORM amd build our routes
 (async function () {
   connection = await ormConnect();
-  (new PCRouteBuilder(router, connection)).buildRoutes();
+
+  let routeBuilder = new PCRouteBuilder(router, connection);
+  routeBuilder.buildRoutes();
 })();
 
 // prefixes /api/v1 to all our routes, good practice
