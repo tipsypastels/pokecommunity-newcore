@@ -1,21 +1,10 @@
 import 'reflect-metadata';
 import { createConnection, getConnection } from 'typeorm';
+import options from './environments';
 
 export default async function() {
-  const options = {
-    type: 'sqlite',
-    database: 'database.sqlite',
-    entities: [`${__dirname}/models/*.js`],
-    logging: true,
-    synchronize: true,
-  };
+  await createConnection(options);
+  console.log('ORM Connected!');
 
-  try {
-    await createConnection(options);
-    console.log('ORM Connected!');
-
-    return getConnection();
-  } catch(e) {
-    console.log(e.message);
-  }
+  return getConnection();
 };
