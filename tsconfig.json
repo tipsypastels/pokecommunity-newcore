@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
-    "experimentalDecorators": true, //silences the error
-    "allowJs": true, // includes .js files (not just .ts)
+    "experimentalDecorators": true,
+    "allowJs": true,
     "noEmit": true
   },
   "exclude": [
-    "node_modules" //exclude large folders with libs from project (it'll be faster)
+    "node_modules", "lib"
   ],
   "typeAcquisition": {
-    "enable": true // helps fuel better js intellisense
+    "enable": true
   }
 }
