@@ -1,6 +1,5 @@
 import ormConnect from './connection.js';
 import User from './models/User.js';
-import { getConnection } from 'typeorm';
 
 /* RUN THIS FILE WITH `yarn seed` to insert test data
    into the database.
