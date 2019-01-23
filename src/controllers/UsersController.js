@@ -1,4 +1,4 @@
-import User from '../models/User.js';
+import User from '../models/User';
 
 export default {
   async show(req, res, connection) {

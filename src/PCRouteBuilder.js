@@ -1,9 +1,10 @@
 import UsersController from './controllers/UsersController';
+import ThreadsController from './controllers/ThreadsController';
 
 export default class PCRouteBuilder {
   /*
    * API ENDPOINTS
-   * Use this.get/post depending on the request types.
+   * Use get/post depending on the request types.
    * It takes a path and a controller action.
    * Controllers must be imported at the top.
    * Use colon for params (ex. :userid).
@@ -11,7 +12,11 @@ export default class PCRouteBuilder {
    */
 
   buildRoutes() {
+    // USERS
     this.get('/users/:userid', UsersController.show);
+
+    // THREADS
+    this.get('/threads/:threadid', ThreadsController.show);
   }
 
   /*

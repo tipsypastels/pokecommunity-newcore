@@ -9,7 +9,7 @@ let connection;
 import PCRouteBuilder from './PCRouteBuilder';
 
 // server setup
-const app = express();
+const app  = express();
 const port = process.env.PORT || 8080;
 
 // app.use allows us to add middleware,
@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 const router = express.Router();
 
 // connect to the ORM amd build our routes
-(async function () {
+(async function() {
   connection = await ormConnect();
   PCRouteBuilder.buildRoutes(router, connection);
 })();

@@ -19,6 +19,6 @@ const environments = Object.freeze({
 });
 
 const env     = process.env.POKECOM_NEWCORE_ENV || 'development';
-const options = Object.assign(environments.all, environments[env]);
+const options = Object.assign({}, environments.all, environments[env]);
 
 export default options;
